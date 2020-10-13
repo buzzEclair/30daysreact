@@ -1,0 +1,143 @@
+$body: #83b6cb;
+$orange: #d67244;
+$blue: #5d99cd;
+$yellow: #c7ad51;
+
+.avatar{
+  background: $body;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  img{
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 80%;
+  }
+}
+
+.overlay{
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 120%;
+  top: -130px;
+  left: 0;
+  transition-duration: 0.5s;
+}
+
+.title{
+  font-size: 7rem;
+  color: #e7e9ed;
+  line-height: 150px;
+  position: relative;
+  z-index: 5;
+  margin-left: 15px;
+  flex-grow: 4;
+  &.title-up::before{
+    position: absolute;
+    content: '30 Days';
+    width: 100%;
+    left: 4px;
+    top: 0px;
+    color: $orange;
+    z-index: -1;
+  }
+  &.title-up::after{
+    position: absolute;
+    content: '30 Days';
+    width: 100%;
+    left: 0px;
+    top: 4px;
+    color: $blue;
+    z-index: -1;
+  }
+  &.title-down::before{
+    position: absolute;
+    content: 'Of React';
+    width: 100%;
+    left: 4px;
+    top: 0px;
+    color: $orange;
+    z-index: -1;
+  }
+  &.title-down::after{
+    position: absolute;
+    content: 'Of React';
+    width: 100%;
+    left: 0px;
+    top: 4px;
+    color: $blue;
+    z-index: -1;
+  }
+  &.title-up, &.title-down{
+    span{
+      position: absolute;
+      content: 'Of React';
+      width: 100%;
+      left: 0px;
+      top: -4px;
+      color: $yellow;
+      z-index: -1;
+    }
+  }
+}
+
+.content-items{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  .item{
+    width: 25%;
+    height: 100%;
+
+    outline: 1px solid #6b7178;
+    cursor: pointer;
+    position: relative;
+    &:hover{
+      animation: itemBg 2s reverse infinite;
+    }
+    &.item-cs:hover{
+      animation: none;
+    }
+    div{
+      width: 100%;
+      display: block;
+      position: absolute;
+      height: 100%;
+      p{
+        margin: 0;
+        padding: 0;
+      }
+      .item-techno{
+        font-size: 18px;
+        color:#61dafb;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 20px;
+      }
+      .item-date{
+        font-size: 16px;
+        font-weight: 600;
+        padding: 0 0 0 20px;
+      }
+      .item-title{
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 21px;
+        transition: transform 0.3s ease-out;
+        font-weight: 800;
+      }
+    }
+    &::after{
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+  } 
+}

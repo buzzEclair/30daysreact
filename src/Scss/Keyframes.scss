@@ -1,0 +1,11 @@
+$orange: #d67244;
+$blue: #5d99cd;
+$yellow: #c7ad51;
+$content : #252728;
+
+@keyframes itemBg{
+  0% {background: $orange;}
+  33% {background: $blue;;}
+  66% {background: $yellow;}
+  100% {background: $orange;}
+}

@@ -1,0 +1,57 @@
+$content : #252728;
+
+.content-post{
+  background : #ffffff;
+  color: $content ;
+  position: relative;
+  margin-bottom: 50px;
+  .post-title{
+    width: 80%;
+    margin: 0 auto;
+    p{
+      font-size: 70px;
+      text-align: center;
+      font-weight: 600;
+      
+    }
+  }
+  .post-description{
+    margin-top: 30px;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+    margin-bottom: 10px;
+  }
+  iframe{
+    margin-top: 40px;
+  }
+}
+
+.btn-back{
+  position: absolute;
+  font-size: 18px;
+  top: -35px;
+  left: -50px;
+  border: none;
+  background: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  svg{
+    font-size: 30px;
+    margin-right: 5px;
+  }
+}
+.content-btn{
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+.button-demo{
+  background: $content;
+  padding: 10px 20px;
+}
